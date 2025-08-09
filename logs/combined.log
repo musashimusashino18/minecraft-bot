@@ -1,0 +1,123 @@
+{"level":"error","message":"コマンド実行エラー [hello]: Cannot read properties of undefined (reading 'currentTask')","stack":"TypeError: Cannot read properties of undefined (reading 'currentTask')\n    at currentTask (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commandHandler.js:14:21)\n    at Object.handleChatCommands (C:\\Users\\musas\\Desktop\\minecraft-bot\\__tests__\\commands.test.js:27:5)\n    at Promise.finally.completed (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1499:10)\n    at _callCircusTest (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:829:11)\n    at run (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1920:21)\n    at jestAdapter (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\runner.js:101:19)\n    at runTestInternal (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-runner\\build\\index.js:275:16)\n    at runTest (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-runner\\build\\index.js:343:7)","timestamp":"2025-08-09 15:53:01"}
+{"level":"error","message":"コマンド実行エラー [hello]: Cannot read properties of undefined (reading 'isBusy') Cannot read properties of undefined (reading 'isBusy')","stack":"TypeError: Cannot read properties of undefined (reading 'isBusy')\n    at isBusy (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commandHandler.js:15:26)\n    at Object.handleChatCommands (C:\\Users\\musas\\Desktop\\minecraft-bot\\__tests__\\commands.test.js:31:5)\n    at Promise.finally.completed (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1499:10)\n    at _callCircusTest (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1009:40)\n    at _runTest (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:829:11)\n    at run (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1920:21)\n    at jestAdapter (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-circus\\build\\runner.js:101:19)\n    at runTestInternal (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-runner\\build\\index.js:275:16)\n    at runTest (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\jest-runner\\build\\index.js:343:7)","timestamp":"2025-08-09T07:10:29.692Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:21:37.857Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:21:37.860Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:21:37.860Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:21:37.862Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:25:37.438Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:25:37.444Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:25:37.445Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:25:37.445Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:26:25.645Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:26:25.652Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:26:25.652Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:26:25.653Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:27:27.088Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:27:27.092Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:27:27.095Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:27:27.097Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:28:51.199Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:28:51.205Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:28:51.205Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:28:51.206Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:30:21.289Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:30:21.293Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:30:21.296Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:30:21.297Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:31:49.072Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:31:49.076Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:31:49.078Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:31:49.080Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:33:29.697Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:33:29.701Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:33:29.703Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:33:29.705Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:34:18.702Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:34:18.708Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:34:18.709Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:34:18.709Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:35:43.111Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:35:43.115Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:35:43.118Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:35:43.120Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:36:40.415Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:36:40.418Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:36:40.419Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:36:40.423Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:37:42.510Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:37:42.514Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:37:42.515Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:37:42.518Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:38:40.709Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:38:40.712Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:38:40.713Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:38:40.716Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:40:03.992Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:40:03.996Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:40:03.998Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ エラーが発生しました:","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)","timestamp":"2025-08-09T09:40:04.000Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:49:03.026Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:49:03.030Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:52:20.044Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:52:20.048Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T09:53:11.272Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T09:53:11.276Z"}
+{"level":"info","message":"✅ ボットが Player としてログインしました","timestamp":"2025-08-09T09:59:35.396Z"}
+{"level":"info","message":"🌍 サーバー: undefined:undefined","timestamp":"2025-08-09T09:59:35.399Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T09:59:35.418Z"}
+{"level":"info","message":"📍 初期位置: x=10, y=-60, z=-8","timestamp":"2025-08-09T09:59:35.426Z"}
+{"level":"info","message":"❤️  体力: undefined/20, 🍖 空腹度: undefined/20","timestamp":"2025-08-09T09:59:35.427Z"}
+{"level":"info","message":"💬 musashimusashino: come","timestamp":"2025-08-09T10:00:05.668Z"}
+{"context":"コマンド実行エラー [come]","level":"error","message":"Bot Error: this.handleError is not a function","stack":"TypeError: this.handleError is not a function\n    at ComeCommand.execute (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commands\\base\\BaseCommand.js:38:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async handleChatCommands (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commandHandler.js:26:7)","timestamp":"2025-08-09T10:00:05.669Z"}
+{"level":"info","message":"💬 musashimusashino: follow","timestamp":"2025-08-09T10:00:19.770Z"}
+{"context":"コマンド実行エラー [follow]","level":"error","message":"Bot Error: this.handleError is not a function","stack":"TypeError: this.handleError is not a function\n    at FollowCommand.execute (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commands\\base\\BaseCommand.js:38:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async handleChatCommands (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commandHandler.js:26:7)","timestamp":"2025-08-09T10:00:19.770Z"}
+{"level":"info","message":"🔌 サーバーから切断されました","timestamp":"2025-08-09T10:00:42.788Z"}
+{"level":"info","message":"🔄 5秒後に再接続します... (1/5)","timestamp":"2025-08-09T10:00:42.789Z"}
+{"level":"info","message":"✅ ボットが Player としてログインしました","timestamp":"2025-08-09T10:01:18.875Z"}
+{"level":"info","message":"🌍 サーバー: undefined:undefined","timestamp":"2025-08-09T10:01:18.877Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:01:18.895Z"}
+{"level":"info","message":"📍 初期位置: x=-8, y=-60, z=6","timestamp":"2025-08-09T10:01:18.900Z"}
+{"level":"info","message":"❤️  体力: undefined/20, 🍖 空腹度: undefined/20","timestamp":"2025-08-09T10:01:18.900Z"}
+{"level":"info","message":"💬 musashimusashino: come","timestamp":"2025-08-09T10:01:24.583Z"}
+{"context":"コマンド実行エラー [come]","level":"error","message":"Bot Error: this.handleError is not a function","stack":"TypeError: this.handleError is not a function\n    at ComeCommand.execute (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commands\\base\\BaseCommand.js:38:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async handleChatCommands (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commandHandler.js:26:7)","timestamp":"2025-08-09T10:01:24.584Z"}
+{"level":"info","message":"✅ ボットが Player としてログインしました","timestamp":"2025-08-09T10:03:07.714Z"}
+{"level":"info","message":"🌍 サーバー: undefined:undefined","timestamp":"2025-08-09T10:03:07.716Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:03:07.733Z"}
+{"level":"info","message":"📍 初期位置: x=-8, y=-60, z=6","timestamp":"2025-08-09T10:03:07.739Z"}
+{"level":"info","message":"❤️  体力: undefined/20, 🍖 空腹度: undefined/20","timestamp":"2025-08-09T10:03:07.739Z"}
+{"level":"info","message":"💬 musashimusashino: follow","timestamp":"2025-08-09T10:03:13.423Z"}
+{"context":"コマンド実行エラー [follow]","level":"error","message":"Bot Error: this.hasPermission is not a function","stack":"TypeError: this.hasPermission is not a function\n    at FollowCommand.validate (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commands\\base\\BaseCommand.js:16:15)\n    at FollowCommand.execute (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commands\\base\\BaseCommand.js:34:18)\n    at handleChatCommands (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commandHandler.js:26:21)\n    at EventEmitter.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\events\\chat.js:10:5)\n    at EventEmitter.emit (node:events:518:28)\n    at EventEmitter.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\mineflayer\\lib\\plugins\\chat.js:85:13)\n    at EventEmitter.emit (node:events:518:28)\n    at Client.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\mineflayer\\lib\\plugins\\chat.js:131:9)\n    at Client.emit (node:events:518:28)\n    at Client.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\minecraft-protocol\\src\\client\\chat.js:201:14)","timestamp":"2025-08-09T10:03:13.424Z"}
+{"level":"info","message":"✅ ボットが Player としてログインしました","timestamp":"2025-08-09T10:04:02.116Z"}
+{"level":"info","message":"🌍 サーバー: undefined:undefined","timestamp":"2025-08-09T10:04:02.118Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:04:02.134Z"}
+{"level":"info","message":"📍 初期位置: x=-8, y=-60, z=6","timestamp":"2025-08-09T10:04:02.139Z"}
+{"level":"info","message":"❤️  体力: undefined/20, 🍖 空腹度: undefined/20","timestamp":"2025-08-09T10:04:02.139Z"}
+{"level":"info","message":"💬 musashimusashino: follow","timestamp":"2025-08-09T10:04:07.342Z"}
+{"level":"info","message":"💬 musashimusashino: stop","timestamp":"2025-08-09T10:04:14.118Z"}
+{"level":"info","message":"💬 musashimusashino: come","timestamp":"2025-08-09T10:04:22.045Z"}
+{"level":"info","message":"💬 musashimusashino: follow","timestamp":"2025-08-09T10:04:46.526Z"}
+{"level":"info","message":"✅ ボットが Player としてログインしました","timestamp":"2025-08-09T10:06:33.565Z"}
+{"level":"info","message":"🌍 サーバー: undefined:undefined","timestamp":"2025-08-09T10:06:33.567Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:06:33.584Z"}
+{"level":"info","message":"📍 初期位置: x=132, y=-54, z=150","timestamp":"2025-08-09T10:06:33.589Z"}
+{"level":"info","message":"❤️  体力: undefined/20, 🍖 空腹度: undefined/20","timestamp":"2025-08-09T10:06:33.590Z"}
+{"level":"info","message":"💬 musashimusashino: follow","timestamp":"2025-08-09T10:06:41.270Z"}
+{"context":"コマンド実行エラー [follow]","level":"error","message":"Bot Error: this.hasPermission is not a function","stack":"TypeError: this.hasPermission is not a function\n    at FollowCommand.validate (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commands\\base\\BaseCommand.js:16:15)\n    at FollowCommand.execute (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commands\\base\\BaseCommand.js:34:18)\n    at handleChatCommands (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\commandHandler.js:26:21)\n    at EventEmitter.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\src\\events\\chat.js:10:5)\n    at EventEmitter.emit (node:events:518:28)\n    at EventEmitter.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\mineflayer\\lib\\plugins\\chat.js:85:13)\n    at EventEmitter.emit (node:events:518:28)\n    at Client.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\mineflayer\\lib\\plugins\\chat.js:131:9)\n    at Client.emit (node:events:518:28)\n    at Client.<anonymous> (C:\\Users\\musas\\Desktop\\minecraft-bot\\node_modules\\minecraft-protocol\\src\\client\\chat.js:201:14)","timestamp":"2025-08-09T10:06:41.271Z"}
+{"level":"info","message":"✅ ボットが Player としてログインしました","timestamp":"2025-08-09T10:07:47.766Z"}
+{"level":"info","message":"🌍 サーバー: undefined:undefined","timestamp":"2025-08-09T10:07:47.768Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:07:47.784Z"}
+{"level":"info","message":"📍 初期位置: x=132, y=-54, z=150","timestamp":"2025-08-09T10:07:47.790Z"}
+{"level":"info","message":"❤️  体力: undefined/20, 🍖 空腹度: undefined/20","timestamp":"2025-08-09T10:07:47.790Z"}
+{"level":"info","message":"💬 musashimusashino: follow","timestamp":"2025-08-09T10:07:55.193Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:11:04.984Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:17:27.699Z"}
+{"level":"info","message":"✅ ボットが Player としてログインしました","timestamp":"2025-08-09T10:26:08.091Z"}
+{"level":"info","message":"🌍 サーバー: undefined:undefined","timestamp":"2025-08-09T10:26:08.093Z"}
+{"level":"info","message":"🎮 ワールドにスポーンしました","timestamp":"2025-08-09T10:26:08.109Z"}
+{"level":"info","message":"📍 初期位置: x=131, y=-53, z=148","timestamp":"2025-08-09T10:26:08.114Z"}
+{"level":"info","message":"❤️  体力: undefined/20, 🍖 空腹度: undefined/20","timestamp":"2025-08-09T10:26:08.115Z"}
+{"level":"info","message":"💬 musashimusashino: come","timestamp":"2025-08-09T10:26:19.588Z"}
+{"level":"info","message":"💬 musashimusashino: come","timestamp":"2025-08-09T10:27:01.004Z"}
+{"level":"info","message":"💬 musashimusashino: help","timestamp":"2025-08-09T10:28:30.087Z"}
+{"level":"info","message":"💬 musashimusashino: help","timestamp":"2025-08-09T10:28:43.849Z"}
+{"level":"info","message":"💬 musashimusashino: mine oak_log","timestamp":"2025-08-09T10:29:01.623Z"}

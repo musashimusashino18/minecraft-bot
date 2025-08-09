@@ -1,0 +1,19 @@
+{
+  "bot": {
+    "host": "localhost",
+    "port": 25565,
+    "username": "MinecraftBot",
+    "reconnectAttempts": 5,
+    "reconnectDelay": 5000
+  },
+  "features": {
+    "autoReconnect": true,
+    "verboseChat": false,
+    "commandCooldown": 3000
+  },
+  "limits": {
+    "maxBuildSize": 20,
+    "maxMineDistance": 32,
+    "maxFollowDistance": 100
+  }
+}
