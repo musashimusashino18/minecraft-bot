@@ -1,5 +1,4 @@
 const { handleChatCommands } = require("../../src/commandHandler"); // Import handleChatCommands
-const EventEmitter = require("events"); // Need EventEmitter for mockBot
 
 describe("Bot Integration Tests", () => {
   let bot; // This will be our mockBot
@@ -15,13 +14,13 @@ describe("Bot Integration Tests", () => {
       stateManager: {
         isBusy: jest.fn(() => false),
         canExecute: jest.fn(() => true),
-        currentTask: "idle"
+        currentTask: "idle",
       },
       errorHandler: {
-        handle: jest.fn()
+        handle: jest.fn(),
       },
       metrics: {
-        recordCommand: jest.fn()
+        recordCommand: jest.fn(),
       },
       // Explicitly mock event emitter methods
       _events: {},
@@ -38,14 +37,14 @@ describe("Bot Integration Tests", () => {
       }),
       emit: jest.fn((event, ...args) => {
         if (bot._events[event]) {
-          bot._events[event].forEach(listener => listener(...args));
+          bot._events[event].forEach((listener) => listener(...args));
         }
       }),
       removeListener: jest.fn((event, listener) => {
         if (bot._events[event]) {
-          bot._events[event] = bot._events[event].filter(l => l !== listener);
+          bot._events[event] = bot._events[event].filter((l) => l !== listener);
         }
-      })
+      }),
     };
 
     const mockHelloCommand = {
@@ -55,7 +54,6 @@ describe("Bot Integration Tests", () => {
       permissions: ["basic"],
       execute: jest.fn(async (botInstance, username, _args) => {
         botInstance.chat(`こんにちは、${username}さん！元気ですよ！`);
-      }),
       }),
     };
     bot.commands.set("hello", mockHelloCommand);
@@ -68,13 +66,11 @@ describe("Bot Integration Tests", () => {
 
   test('should handle the "hello" command and respond correctly', (done) => {
     const testUsername = "testUser";
-    const expectedResponse = "こんにちは、" + testUsername + "さん！元気ですよ！";
+    const expectedResponse = `こんにちは、${testUsername}さん！元気ですよ！`;
 
     handleChatCommands(bot, testUsername, "hello");
 
     expect(mockChatFn).toHaveBeenCalledWith(expectedResponse);
-    // console.log('DEBUG: mockChatFn.mock.calls:', mockChatFn.mock.calls); // Removed debug log
-
     done();
   });
 });

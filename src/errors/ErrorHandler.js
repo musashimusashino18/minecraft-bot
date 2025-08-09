@@ -3,10 +3,10 @@ const {
   BotError,
   MovementError,
   InventoryError,
-  PathfindingError,
+  PathfindingError, // eslint-disable-line no-unused-vars
   ConnectionError,
   TimeoutError,
-  ValidationError,
+  ValidationError, // eslint-disable-line no-unused-vars
 } = require("./BotError");
 
 class ErrorHandler {

@@ -34,7 +34,6 @@ describe("Command Handler", () => {
       execute: jest.fn(async (botInstance, username, _args) => {
         botInstance.chat(`こんにちは、${username}さん！元気ですよ！`);
       }),
-      }),
     };
     mockBot.commands.set("hello", mockHelloCommand);
     mockBot.commands.set("こんにちは", mockHelloCommand);
@@ -42,10 +41,9 @@ describe("Command Handler", () => {
 
   test("should respond to hello command", () => {
     const testUsername = "testUser";
-    const expectedResponse = "こんにちは、" + testUsername + "さん！元気ですよ！";
+    const expectedResponse = `こんにちは、${testUsername}さん！元気ですよ！`;
 
     handleChatCommands(mockBot, testUsername, "hello");
     expect(mockChatFn).toHaveBeenCalledWith(expectedResponse);
-    // console.log('DEBUG: mockChatFn.mock.calls:', mockChatFn.mock.calls); // Removed debug log
   });
 });
