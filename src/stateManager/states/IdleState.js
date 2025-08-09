@@ -1,4 +1,4 @@
-const BaseState = require('./BaseState');
+const BaseState = require("./BaseState");
 
 class IdleState extends BaseState {
   constructor(stateManager) {

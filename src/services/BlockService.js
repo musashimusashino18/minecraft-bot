@@ -17,7 +17,7 @@ class BlockService {
     const cacheKey = `${type}_${maxDistance}_${Math.floor(this.bot.entity.position.x / 16)}_${Math.floor(this.bot.entity.position.z / 16)}`;
 
     if (useCache) {
-      const cached = this.cache.get('blocks', cacheKey);
+      const cached = this.cache.get("blocks", cacheKey);
       if (cached) {
         return cached;
       }
@@ -36,7 +36,7 @@ class BlockService {
       count: 100, // Limit the count to avoid performance issues
     });
 
-    this.cache.set('blocks', cacheKey, blocks, 15000); // 15秒キャッシュ
+    this.cache.set("blocks", cacheKey, blocks, 15000); // 15秒キャッシュ
     return blocks;
   }
 }

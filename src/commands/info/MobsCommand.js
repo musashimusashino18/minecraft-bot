@@ -1,11 +1,11 @@
-const BaseCommand = require('../base/BaseCommand');
+const BaseCommand = require("../base/BaseCommand");
 
 class MobsCommand extends BaseCommand {
   constructor() {
     super({
-      name: 'mobs',
-      aliases: ['モブ'],
-      description: '近くにいるモブを一覧表示します。',
+      name: "mobs",
+      aliases: ["モブ"],
+      description: "近くにいるモブを一覧表示します。",
     });
   }
 
@@ -17,7 +17,7 @@ class MobsCommand extends BaseCommand {
     });
 
     if (mobs.length === 0) {
-      bot.chat('近くにモブはいません');
+      bot.chat("近くにモブはいません");
       return;
     }
 

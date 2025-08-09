@@ -1,11 +1,11 @@
-const BaseCommand = require('../base/BaseCommand');
+const BaseCommand = require("../base/BaseCommand");
 
 class BlocksCommand extends BaseCommand {
   constructor() {
     super({
-      name: 'blocks',
-      aliases: ['ブロック'],
-      description: '近くにあるブロックを一覧表示します。',
+      name: "blocks",
+      aliases: ["ブロック"],
+      description: "近くにあるブロックを一覧表示します。",
     });
   }
 
@@ -17,7 +17,7 @@ class BlocksCommand extends BaseCommand {
       for (let y = -2; y <= 2; y++) {
         for (let z = -2; z <= 2; z++) {
           const block = bot.blockAt(pos.offset(x, y, z));
-          if (block && block.name !== 'air') {
+          if (block && block.name !== "air") {
             blocks[block.displayName] = (blocks[block.displayName] || 0) + 1;
           }
         }
@@ -25,11 +25,11 @@ class BlocksCommand extends BaseCommand {
     }
 
     if (Object.keys(blocks).length === 0) {
-      bot.chat('近くに特筆すべきブロックはありません');
+      bot.chat("近くに特筆すべきブロックはありません");
       return;
     }
 
-    bot.chat('=== 近くのブロック (5x5x5範囲) ===');
+    bot.chat("=== 近くのブロック (5x5x5範囲) ===");
     Object.entries(blocks)
       .slice(0, 5)
       .forEach(([name, count]) => {

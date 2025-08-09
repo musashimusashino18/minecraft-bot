@@ -1,9 +1,9 @@
 class SecurityManager {
   constructor() {
     this.permissions = {
-      admin: ['mine', 'build', 'drop', 'chest'],
-      trusted: ['come', 'follow', 'goto'],
-      basic: ['pos', 'health', 'time', 'inv'],
+      admin: ["mine", "build", "drop", "chest"],
+      trusted: ["come", "follow", "goto"],
+      basic: ["pos", "health", "time", "inv"],
     };
     this.userRoles = new Map();
     this.commandCooldowns = new Map();
@@ -14,7 +14,7 @@ class SecurityManager {
   }
 
   hasPermission(username, command) {
-    const role = this.userRoles.get(username) || 'basic';
+    const role = this.userRoles.get(username) || "basic";
 
     for (const [roleLevel, commands] of Object.entries(this.permissions)) {
       if (commands.includes(command)) {
@@ -26,7 +26,7 @@ class SecurityManager {
   }
 
   hasRole(userRole, requiredRole) {
-    const hierarchy = ['basic', 'trusted', 'admin'];
+    const hierarchy = ["basic", "trusted", "admin"];
     const userIndex = hierarchy.indexOf(userRole);
     const requiredIndex = hierarchy.indexOf(requiredRole);
 

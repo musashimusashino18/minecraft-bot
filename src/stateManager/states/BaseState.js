@@ -3,7 +3,7 @@ class BaseState {
   constructor(stateManager) {
     this.stateManager = stateManager;
     this.bot = stateManager.bot;
-    this.allowedCommands = ['stop', 'help', 'pos', 'health'];
+    this.allowedCommands = ["stop", "help", "pos", "health"];
   }
 
   async enter(context) {

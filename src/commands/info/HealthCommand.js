@@ -1,11 +1,11 @@
-const BaseCommand = require('../base/BaseCommand');
+const BaseCommand = require("../base/BaseCommand");
 
 class HealthCommand extends BaseCommand {
   constructor() {
     super({
-      name: 'health',
-      aliases: ['体力'],
-      description: '現在の体力と空腹度を表示します。',
+      name: "health",
+      aliases: ["体力"],
+      description: "現在の体力と空腹度を表示します。",
     });
   }
 

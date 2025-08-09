@@ -9,9 +9,9 @@ class AutoFarmPlugin {
   }
 
   registerCommands() {
-    this.bot.commands.set('autofarm', {
-      name: 'autofarm',
-      description: '自動農業を開始します',
+    this.bot.commands.set("autofarm", {
+      name: "autofarm",
+      description: "自動農業を開始します",
       execute: this.startFarming.bind(this),
     });
   }

@@ -9,7 +9,7 @@ class CacheManager {
     this.cleanupInterval = setInterval(() => this.cleanup(), 10000);
 
     // ボット終了時にクリーンアップタイマーを停止
-    this.bot.once('end', () => this.stopCleanup());
+    this.bot.once("end", () => this.stopCleanup());
   }
 
   getCache(name) {
