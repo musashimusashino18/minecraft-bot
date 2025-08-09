@@ -1,4 +1,4 @@
 // Simple event bus
-const EventEmitter = require('events');
+const EventEmitter = require("events");
 class EventBus extends EventEmitter {}
 module.exports = EventBus;

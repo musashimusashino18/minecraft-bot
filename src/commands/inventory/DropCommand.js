@@ -1,17 +1,17 @@
-const BaseCommand = require('../base/BaseCommand');
-const { ValidationError } = require('../../errors/BotError');
+const BaseCommand = require("../base/BaseCommand");
+const { ValidationError } = require("../../errors/BotError");
 
 class DropCommand extends BaseCommand {
   constructor() {
     super({
-      name: 'drop',
-      aliases: ['捨てる'],
+      name: "drop",
+      aliases: ["捨てる"],
       description:
-        '指定したアイテムを捨てます。使用法: drop <アイテム名> [数量]',
+        "指定したアイテムを捨てます。使用法: drop <アイテム名> [数量]",
       validators: [
         (bot, username, args) => {
           if (!args[0]) {
-            throw new ValidationError('アイテム名を指定してください。');
+            throw new ValidationError("アイテム名を指定してください。");
           }
         },
       ],
@@ -34,8 +34,8 @@ class DropCommand extends BaseCommand {
       await bot.toss(item.type, null, dropAmount);
       bot.chat(`${itemName}を${dropAmount}個捨てました`);
     } catch (err) {
-      bot.chat('アイテムを捨てられませんでした');
-      this.bot.logger.error('Drop error:', err);
+      bot.chat("アイテムを捨てられませんでした");
+      this.bot.logger.error("Drop error:", err);
     }
   }
 }

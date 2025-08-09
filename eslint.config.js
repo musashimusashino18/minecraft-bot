@@ -1,19 +1,19 @@
-const globals = require('globals');
-const js = require('@eslint/js');
-const prettierPlugin = require('eslint-plugin-prettier');
-const prettierConfig = require('eslint-config-prettier');
+const globals = require("globals");
+const js = require("@eslint/js");
+const prettierPlugin = require("eslint-plugin-prettier");
+const prettierConfig = require("eslint-config-prettier");
 
 module.exports = [
   {
-    files: ['**/*.js'],
+    files: ["**/*.js"],
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
         ...globals.jest, // Add Jest globals
       },
-      ecmaVersion: 'latest',
-      sourceType: 'commonjs',
+      ecmaVersion: "latest",
+      sourceType: "commonjs",
     },
     rules: {
       // Custom rules or overrides
@@ -27,17 +27,17 @@ module.exports = [
     },
     rules: {
       ...prettierConfig.rules, // Apply rules from eslint-config-prettier
-      'prettier/prettier': 'error', // Your specific rule
+      "prettier/prettier": "error", // Your specific rule
     },
   },
   {
     rules: {
-      'no-unused-vars': [
-        'error',
+      "no-unused-vars": [
+        "error",
         {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          caughtErrorsIgnorePattern: '^_',
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
         },
       ],
     },

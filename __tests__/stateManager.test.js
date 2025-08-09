@@ -1,12 +1,12 @@
-const StateManager = require('../src/stateManager');
-const IdleState = require('../src/stateManager/states/IdleState');
-const MiningState = require('../src/stateManager/states/MiningState');
+const StateManager = require("../src/stateManager");
+const IdleState = require("../src/stateManager/states/IdleState");
+const MiningState = require("../src/stateManager/states/MiningState");
 
 // Mock the state classes
-jest.mock('../src/stateManager/states/IdleState');
-jest.mock('../src/stateManager/states/MiningState');
+jest.mock("../src/stateManager/states/IdleState");
+jest.mock("../src/stateManager/states/MiningState");
 
-describe('StateManager', () => {
+describe("StateManager", () => {
   let bot, stateManager;
 
   beforeEach(() => {
@@ -26,7 +26,7 @@ describe('StateManager', () => {
       exit: jest.fn(),
       canExecute: jest.fn((commandName) => {
         // Simulate BaseState and MiningState allowed commands
-        const allowed = ['stop', 'help', 'pos', 'health', 'inv'];
+        const allowed = ["stop", "help", "pos", "health", "inv"];
         return allowed.includes(commandName);
       }),
       interrupt: jest.fn(),
@@ -42,22 +42,22 @@ describe('StateManager', () => {
     stateManager = new StateManager(bot);
   });
 
-  test('should set and clear task correctly', async () => {
-    await stateManager.transitionTo('mining');
-    expect(stateManager.currentTask).toBe('mining');
+  test("should set and clear task correctly", async () => {
+    await stateManager.transitionTo("mining");
+    expect(stateManager.currentTask).toBe("mining");
     expect(stateManager.isBusy()).toBe(true);
     expect(MiningState).toHaveBeenCalledTimes(1); // Ensure MiningState was instantiated
     expect(stateManager.currentState.enter).toHaveBeenCalledTimes(1); // Ensure enter was called
 
-    await stateManager.transitionTo('idle');
-    expect(stateManager.currentTask).toBe('idle');
+    await stateManager.transitionTo("idle");
+    expect(stateManager.currentTask).toBe("idle");
     expect(stateManager.isBusy()).toBe(false);
     expect(stateManager.currentState.enter).toHaveBeenCalledTimes(1); // Ensure enter was called for idle state
   });
 
-  test('should check command execution permission', async () => {
-    await stateManager.transitionTo('mining');
-    expect(stateManager.canExecute('build')).toBe(false); // Based on mock MiningState canExecute
-    expect(stateManager.canExecute('stop')).toBe(true); // BaseState default
+  test("should check command execution permission", async () => {
+    await stateManager.transitionTo("mining");
+    expect(stateManager.canExecute("build")).toBe(false); // Based on mock MiningState canExecute
+    expect(stateManager.canExecute("stop")).toBe(true); // BaseState default
   });
 });

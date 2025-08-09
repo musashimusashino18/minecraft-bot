@@ -1,12 +1,12 @@
-const BaseCommand = require('../base/BaseCommand');
+const BaseCommand = require("../base/BaseCommand");
 
 class HelloCommand extends BaseCommand {
   constructor() {
     super({
-      name: 'hello',
-      aliases: ['こんにちは'],
-      description: '挨拶を返します。',
-      permissions: ['basic'],
+      name: "hello",
+      aliases: ["こんにちは"],
+      description: "挨拶を返します。",
+      permissions: ["basic"],
     });
   }
 

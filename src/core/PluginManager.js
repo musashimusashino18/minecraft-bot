@@ -4,7 +4,7 @@ class PluginManager {
   }
   async loadPlugins(plugins = []) {
     // Placeholder for plugin loading logic
-    console.log(`Loading plugins: ${plugins.join(', ')}`);
+    console.log(`Loading plugins: ${plugins.join(", ")}`);
   }
 }
 module.exports = PluginManager;

@@ -8,7 +8,7 @@ class DIContainer {
   }
   resolve(name) {
     const definition = this.services.get(name);
-    if (typeof definition === 'function') {
+    if (typeof definition === "function") {
       // If it's a factory function, call it
       return definition();
     }

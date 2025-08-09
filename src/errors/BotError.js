@@ -30,7 +30,7 @@ class MovementError extends BotError {
   }
 
   getUserMessage() {
-    return ' 移動に失敗しました。再試行してください。';
+    return " 移動に失敗しました。再試行してください。";
   }
 }
 

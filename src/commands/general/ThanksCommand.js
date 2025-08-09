@@ -1,12 +1,12 @@
-const BaseCommand = require('../base/BaseCommand');
+const BaseCommand = require("../base/BaseCommand");
 
 class ThanksCommand extends BaseCommand {
   constructor() {
     super({
-      name: 'thanks',
-      aliases: ['thank', 'ありがとう'],
-      description: '感謝の言葉に返事をします。',
-      permissions: ['basic'],
+      name: "thanks",
+      aliases: ["thank", "ありがとう"],
+      description: "感謝の言葉に返事をします。",
+      permissions: ["basic"],
     });
   }
 

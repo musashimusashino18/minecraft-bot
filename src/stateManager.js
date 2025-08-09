@@ -1,14 +1,14 @@
-const IdleState = require('./stateManager/states/IdleState');
-const MovingState = require('./stateManager/states/MovingState');
-const MiningState = require('./stateManager/states/MiningState');
-const BuildingState = require('./stateManager/states/BuildingState');
-const FollowingState = require('./stateManager/states/FollowingState');
-const CollectingState = require('./stateManager/states/CollectingState');
+const IdleState = require("./stateManager/states/IdleState");
+const MovingState = require("./stateManager/states/MovingState");
+const MiningState = require("./stateManager/states/MiningState");
+const BuildingState = require("./stateManager/states/BuildingState");
+const FollowingState = require("./stateManager/states/FollowingState");
+const CollectingState = require("./stateManager/states/CollectingState");
 
 class StateManager {
   constructor(bot) {
     this.bot = bot;
-    this.currentStateName = 'idle';
+    this.currentStateName = "idle";
     this.taskQueue = [];
     this.stateHistory = [];
     this.maxHistorySize = 10;
@@ -33,7 +33,7 @@ class StateManager {
       throw new Error(`Unknown state: ${stateName}`);
     }
 
-    if (oldState && typeof oldState.exit === 'function') {
+    if (oldState && typeof oldState.exit === "function") {
       await oldState.exit();
     }
 
@@ -41,11 +41,11 @@ class StateManager {
     this.currentState = this.states[stateName];
     this.addToHistory(oldStateName, stateName, context);
 
-    if (this.currentState && typeof this.currentState.enter === 'function') {
+    if (this.currentState && typeof this.currentState.enter === "function") {
       await this.currentState.enter(context);
     }
 
-    this.bot.emit('stateChanged', {
+    this.bot.emit("stateChanged", {
       from: oldStateName,
       to: stateName,
       context,
@@ -60,7 +60,7 @@ class StateManager {
   }
 
   isBusy() {
-    return this.currentStateName !== 'idle';
+    return this.currentStateName !== "idle";
   }
 
   get currentTask() {
@@ -72,15 +72,15 @@ class StateManager {
     return this.currentState.canExecute(commandName);
   }
 
-  async interrupt(reason = 'user_request') {
-    if (this.currentStateName !== 'idle') {
+  async interrupt(reason = "user_request") {
+    if (this.currentStateName !== "idle") {
       if (
         this.currentState &&
-        typeof this.currentState.interrupt === 'function'
+        typeof this.currentState.interrupt === "function"
       ) {
         await this.currentState.interrupt(reason);
       }
-      await this.transitionTo('idle');
+      await this.transitionTo("idle");
     }
   }
 }

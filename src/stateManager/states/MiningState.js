@@ -1,10 +1,10 @@
-const BaseState = require('./BaseState');
-const { safeDig } = require('../../utils');
+const BaseState = require("./BaseState");
+const { safeDig } = require("../../utils");
 
 class MiningState extends BaseState {
   constructor(stateManager) {
     super(stateManager);
-    this.allowedCommands = [...this.allowedCommands, 'inv'];
+    this.allowedCommands = [...this.allowedCommands, "inv"];
     this.isMining = false;
   }
 
@@ -14,8 +14,8 @@ class MiningState extends BaseState {
 
     this.mine(context.blockName, context.count).finally(() => {
       this.isMining = false;
-      if (this.stateManager.currentStateName === 'mining') {
-        this.stateManager.transitionTo('idle');
+      if (this.stateManager.currentStateName === "mining") {
+        this.stateManager.transitionTo("idle");
       }
     });
   }
@@ -46,7 +46,7 @@ class MiningState extends BaseState {
 
       for (let i = 0; i < validBlocks.length; i++) {
         if (!this.isMining) {
-          bot.chat('採掘が中断されました');
+          bot.chat("採掘が中断されました");
           return;
         }
 
@@ -57,13 +57,13 @@ class MiningState extends BaseState {
         await new Promise((resolve) => setTimeout(resolve, 200));
       }
 
-      bot.chat('採掘完了！');
+      bot.chat("採掘完了！");
     } catch (error) {
       console.log(
-        'MiningState: In catch block. Is bot.errorHandler defined?',
-        !!bot.errorHandler
+        "MiningState: In catch block. Is bot.errorHandler defined?",
+        !!bot.errorHandler,
       );
-      bot.errorHandler.handle(error, 'mining');
+      bot.errorHandler.handle(error, "mining");
     }
   }
 
@@ -74,7 +74,7 @@ class MiningState extends BaseState {
   }
 
   async exit() {
-    this.bot.chat('採掘作業を終了しました。');
+    this.bot.chat("採掘作業を終了しました。");
   }
 }
 

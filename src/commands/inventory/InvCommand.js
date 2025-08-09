@@ -1,11 +1,11 @@
-const BaseCommand = require('../base/BaseCommand');
+const BaseCommand = require("../base/BaseCommand");
 
 class InvCommand extends BaseCommand {
   constructor() {
     super({
-      name: 'inv',
-      aliases: ['inventory', 'インベントリ'],
-      description: 'インベントリの内容を表示します。',
+      name: "inv",
+      aliases: ["inventory", "インベントリ"],
+      description: "インベントリの内容を表示します。",
     });
   }
 
@@ -13,7 +13,7 @@ class InvCommand extends BaseCommand {
     const items = bot.inventory.items();
 
     if (items.length === 0) {
-      bot.chat('インベントリは空です');
+      bot.chat("インベントリは空です");
       return;
     }
 

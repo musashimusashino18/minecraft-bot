@@ -1,4 +1,4 @@
-const { PermissionError, CooldownError } = require('../../errors/BotError');
+const { PermissionError, CooldownError } = require("../../errors/BotError");
 
 // src/commands/base/BaseCommand.js
 class BaseCommand {
@@ -6,7 +6,7 @@ class BaseCommand {
     this.name = config.name;
     this.aliases = config.aliases || [];
     this.description = config.description;
-    this.permissions = config.permissions || ['basic'];
+    this.permissions = config.permissions || ["basic"];
     this.cooldown = config.cooldown || 0;
     this.validators = config.validators || [];
   }
@@ -37,7 +37,7 @@ class BaseCommand {
 
   // サブクラスで実装
   async run(_bot, _username, _args) {
-    throw new Error('Subclasses must implement run method');
+    throw new Error("Subclasses must implement run method");
   }
 
   hasPermission(_username) {
