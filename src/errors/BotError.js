@@ -34,6 +34,42 @@ class MovementError extends BotError {
   }
 }
 
+class InventoryError extends BotError {
+  constructor(message, originalError) {
+    super(message, { originalError }, true); // Recoverable
+  }
+  getUserMessage() {
+    return " インベントリ操作に失敗しました。";
+  }
+}
+
+class PathfindingError extends BotError {
+  constructor(message, originalError) {
+    super(message, { originalError }, true); // Recoverable
+  }
+  getUserMessage() {
+    return " パスファインディングに失敗しました。";
+  }
+}
+
+class ConnectionError extends BotError {
+  constructor(message, originalError) {
+    super(message, { originalError }, false); // Not recoverable
+  }
+  getUserMessage() {
+    return " 接続エラーが発生しました。";
+  }
+}
+
+class TimeoutError extends BotError {
+  constructor(message, originalError) {
+    super(message, { originalError }, true); // Recoverable
+  }
+  getUserMessage() {
+    return " 処理がタイムアウトしました。";
+  }
+}
+
 class ValidationError extends BotError {
   getUserMessage() {
     return `❌ ${this.message}`;
@@ -62,6 +98,10 @@ class CooldownError extends BotError {
 module.exports = {
   BotError,
   MovementError,
+  InventoryError,
+  PathfindingError,
+  ConnectionError,
+  TimeoutError,
   ValidationError,
   PermissionError,
   CooldownError,

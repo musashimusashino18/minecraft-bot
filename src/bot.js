@@ -12,7 +12,7 @@ function createBot() {
   bot.loadPlugin(pathfinder);
 
   // ErrorHandlerを統合
-  bot.errorHandler = new ErrorHandler(bot);
+  bot.errorHandler = new ErrorHandler(bot, config.get("errorHandler"));
 
   // StateManagerを統合
   bot.stateManager = new StateManager(bot);
