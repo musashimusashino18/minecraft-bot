@@ -1,44 +1,65 @@
-const BotFactory = require("../../src/BotFactory");
 const { handleChatCommands } = require("../../src/commandHandler"); // Import handleChatCommands
+const EventEmitter = require("events"); // Need EventEmitter for mockBot
 
-jest.mock("../../src/BotFactory", () => ({
-  create: jest.fn(async () => {
-    const EventEmitter = require("events"); // Moved inside mock factory
-    const mockBot = new EventEmitter();
-    mockBot.chat = jest.fn();
-    mockBot.username = "mock-bot";
-    mockBot.commands = new Map(); // Mock commands map
+describe("Bot Integration Tests", () => {
+  let bot; // This will be our mockBot
+  let mockChatFn; // Declare mockChatFn here
 
-    // Mock the HelloCommand
+  beforeAll(async () => {
+    mockChatFn = jest.fn(); // Create the mock function once
+
+    bot = {
+      username: "mock-bot",
+      chat: mockChatFn, // Assign the single mock function
+      commands: new Map(),
+      stateManager: {
+        isBusy: jest.fn(() => false),
+        canExecute: jest.fn(() => true),
+        currentTask: "idle"
+      },
+      errorHandler: {
+        handle: jest.fn()
+      },
+      metrics: {
+        recordCommand: jest.fn()
+      },
+      // Explicitly mock event emitter methods
+      _events: {},
+      on: jest.fn((event, listener) => {
+        if (!bot._events[event]) bot._events[event] = [];
+        bot._events[event].push(listener);
+      }),
+      once: jest.fn((event, listener) => {
+        const onceListener = (...args) => {
+          listener(...args);
+          bot.removeListener(event, onceListener);
+        };
+        bot.on(event, onceListener);
+      }),
+      emit: jest.fn((event, ...args) => {
+        if (bot._events[event]) {
+          bot._events[event].forEach(listener => listener(...args));
+        }
+      }),
+      removeListener: jest.fn((event, listener) => {
+        if (bot._events[event]) {
+          bot._events[event] = bot._events[event].filter(l => l !== listener);
+        }
+      })
+    };
+
     const mockHelloCommand = {
       name: "hello",
       aliases: ["こんにちは"],
       description: "挨拶を返します。",
       permissions: ["basic"],
-      execute: jest.fn(async (bot, username, _args) => {
-        // Simulate the actual HelloCommand's run method
-        bot.chat(`こんにちは、${username}さん！元気ですよ！`);
+      execute: jest.fn(async (botInstance, username, _args) => {
+        botInstance.chat(`こんにちは、${username}さん！元気ですよ！`);
+      }),
       }),
     };
-    mockBot.commands.set("hello", mockHelloCommand);
-    mockBot.commands.set("こんにちは", mockHelloCommand); // Add alias
-
-    // Simulate spawn immediately
-    process.nextTick(() => {
-      mockBot.emit("spawn");
-    });
-
-    return mockBot;
-  }),
-}));
-
-// No need for config or jest.setTimeout here, as we are mocking BotFactory
-
-describe("Bot Integration Tests", () => {
-  let bot;
-
-  beforeAll(async () => {
-    bot = await BotFactory.create(); // Call the mocked create method
+    bot.commands.set("hello", mockHelloCommand);
+    bot.commands.set("こんにちは", mockHelloCommand);
   });
 
   afterAll(() => {
@@ -47,16 +68,13 @@ describe("Bot Integration Tests", () => {
 
   test('should handle the "hello" command and respond correctly', (done) => {
     const testUsername = "testUser";
-    const expectedResponse = `こんにちは、${testUsername}さん！元気ですよ！`;
+    const expectedResponse = "こんにちは、" + testUsername + "さん！元気ですよ！";
 
-    const chatSpy = jest.spyOn(bot, "chat");
+    handleChatCommands(bot, testUsername, "hello");
 
-    // Simulate the chat event and command handling
-    handleChatCommands(bot, testUsername, "hello"); // Directly call command handler
+    expect(mockChatFn).toHaveBeenCalledWith(expectedResponse);
+    // console.log('DEBUG: mockChatFn.mock.calls:', mockChatFn.mock.calls); // Removed debug log
 
-    // Assertions are synchronous
-    expect(chatSpy).toHaveBeenCalledWith(expectedResponse);
-
-    done(); // Call done() immediately after synchronous assertions
+    done();
   });
 });
